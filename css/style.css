@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+#dashboard,
+html, body {
+    background-color: #1d1d2a;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+nav.bg-dark {
+    background-color: #1d1d2a !important;
+    border-bottom: 1px solid #fff;
+}
+
+a.light {
+    color: #fff;
+}
+
+#card-right .card-body {
+    padding: 0;
+}
+
+#formTable th {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    border: transparent;
+}
+
+.btn-primary {
+    background-color: #242A54 !important;
+    border-color: #242A54 !important;
+}
+
+.card {
+    background-color: #2e303f !important;
+    color: #fff !important;
+}
+
+.card .card-header {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card th,
+.card td,
+.card label {
+    color: #fff !important;
+    border-color: #42445a;
+}
+
+.offcanvas {
+    background-color: #2e303f !important;
+}
+
+.offcanvas-header .offcanvas-title {
+    color: #fff;
+}
+
+.offcanvas-body {
+    padding: 0 !important;
+    margin-top: 20px;
+}
+
+.offcanvas-body .list-group-item:first-child,
+.offcanvas-body .list-group-item:last-child {
+    border-radius: 0 !important;
+}
+
+.offcanvas-body .list-group-item {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #2e303f;
+    color: #7d7d7d;
+}
+
+.offcanvas-body .list-group-item.active {
+    background-color: #42445a;
+    border-color: #42445a;
+}
+
+/* Login */
+#login .list-group-item h5, #login p {
+    margin-bottom: 0;
+}
+
+#login .card-text p {
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+}
+
+#login {
+    background-color: #2e303f;
+    height: 100vh;
+}
+
+#login .container-fluid,
+#login .row {
+    height: 100vh;
+}
+
+#login .left,
+#login .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#imageLog {
+    width: 100%;
+}
+
+#login .card {
+    border-color: transparent;
+}
+
+.card-text {
+    margin-bottom: 35px;
+}
+
+.card-text h5 {
+    font-size: 26px;
+}
+
+.card-text p {
+    font-size: 16px;
+}
+
+#login .list-group-item h5 {
+    font-size: 22px;
+}
+
+#login .list-group-item p {
+    font-size: 12px;
+}
+
+#login .list-group-item {
+    display: flex;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+#login .list-group-item .menu-icon {
+    font-size: 35px;
+}
+
+#login .list-group-item:first-child,
+#login .list-group-item:last-child {
+    border-radius: inherit;
+}
+
+#login .list-group-item-dark.list-group-item-action {
+    background-color: #42445a;
+    border-color: #42445a;
+    color: #fff;
+}
+
+/* /Login */
+
+/* Admin login */
+#loginAdmin .list-group-item h5, #loginAdmin p {
+    margin-bottom: 0;
+}
+
+#loginAdmin .card-text p {
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+}
+
+#loginAdmin {
+    background-color: #2e303f;
+    height: 100vh;
+}
+
+#loginAdmin .container-fluid,
+#loginAdmin .row {
+    height: 100vh;
+}
+
+#loginAdmin .left,
+#loginAdmin .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#imageLog {
+    width: 100%;
+}
+
+#loginAdmin .card {
+    border-color: transparent;
+}
+
+.card-text {
+    margin-bottom: 50px;
+}
+
+.card-text h5 {
+    font-size: 26px;
+}
+
+.card-text p {
+    font-size: 16px;
+}
+
+#loginAdmin .list-group-item h5 {
+    font-size: 22px;
+}
+
+#loginAdmin .list-group-item p {
+    font-size: 12px;
+}
+
+#loginAdmin .list-group-item {
+    display: flex;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+#loginAdmin .list-group-item .menu-icon {
+    font-size: 35px;
+}
+
+#loginAdmin .list-group-item:first-child,
+#loginAdmin .list-group-item:last-child {
+    border-radius: inherit;
+}
+
+#loginAdmin .list-group-item-dark.list-group-item-action {
+    background-color: #42445a;
+    border-color: #42445a;
+    color: #fff;
+}
+
+#loginAdmin .right .card{
+    width: 80%;
+}
+/* /Admin login */
