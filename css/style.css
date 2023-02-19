@@ -7,12 +7,36 @@
     font-family: "Poppins", sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0 !important;
+}
+
 #dashboard,
 html, body {
     background-color: #1d1d2a;
 }
 
-a{
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #1d1d2a;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #2e303f;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #242A54;
+}
+
+
+a {
     text-decoration: none !important;
 }
 
@@ -27,6 +51,10 @@ a.light {
 
 #card-right .card-body {
     padding: 0;
+}
+
+.form-group {
+    margin-bottom: 26px;
 }
 
 #formTable th {
@@ -48,6 +76,8 @@ a.light {
 .card .card-header {
     font-size: 18px;
     font-weight: 600;
+    display: flex;
+    justify-content: space-between;
 }
 
 .card th,
@@ -58,7 +88,7 @@ a.light {
 }
 
 .offcanvas {
-    background-color: #2e303f !important;
+    background-color: #1d1d2a !important;
 }
 
 .offcanvas-header .offcanvas-title {
@@ -78,7 +108,7 @@ a.light {
 .offcanvas-body .list-group-item {
     padding-top: 15px;
     padding-bottom: 15px;
-    background-color: #2e303f;
+    background-color: #1d1d2a;
     color: #7d7d7d;
 }
 
@@ -197,6 +227,10 @@ a.light {
     width: 100%;
 }
 
+.prof-img {
+    width: 40px;
+}
+
 #loginAdmin .card {
     border-color: transparent;
 }
@@ -243,7 +277,32 @@ a.light {
     color: #fff;
 }
 
-#loginAdmin .right .card{
+#loginAdmin .right .card {
     width: 80%;
 }
+
 /* /Admin login */
+
+/* Table */
+.table-bordered {
+    border-color: #42445a !important;
+}
+
+.d-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-searchable .is-hidden {
+    display: none;
+}
+
+.table-searchable .is-match {
+    background-color: rgb(21, 143, 110) !important;
+    transition: background-color .5s ease-in;
+}
+
+.table-searchable td[data-searchable="false"] {
+    background-color: lightcoral;
+}
