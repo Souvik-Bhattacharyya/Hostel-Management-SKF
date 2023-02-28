@@ -18,7 +18,7 @@
             font-weight: 400;
             line-height: 1.5;
             color: #212529;
-            background-color: #fff;
+            background-color: #f6f6f6;
             background-clip: padding-box;
             border: 1px solid #ced4da;
             border-radius: 4px;
@@ -29,14 +29,12 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+    <nav class="navbar navbar-expand-lg bg-light navbar-light sticky-top">
         <div class="container">
-            <a class="light" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+            <a class="navbar-brand" href="#">Hostel Management</a>
+            <a class="dark" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
                 aria-controls="offcanvasExample">
                 <i class="fa-solid fa-bars fa-lg me-2"></i>
-            </a>
-            <a class="navbar-brand d-flex align-items-center" href="#">Hostel Management System
-                <h6><span class="badge text-bg-light ms-2">Boys</span></h6>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -62,7 +60,7 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="./Login/logHome.html">Logout <i
+                            <li><a class="dropdown-item" href="./Login/login.html">Logout <i
                                         class="fa-solid fa-right-from-bracket"></i></a></li>
                         </ul>
                     </li>
@@ -86,8 +84,8 @@
                     All Student List</a>
                 <a type="button" href="./addStudent.html" class="list-group-item list-group-item-action active"><i
                         class="fa-solid fa-user-plus me-2"></i> Add New Student</a>
-                <a type="button" href="./studentRequest.html" class="list-group-item list-group-item-action">
-                    <i class="fa-solid fa-circle-question me-2"></i> Students Requests</a>
+                <!-- <a type="button" href="./studentRequest.html" class="list-group-item list-group-item-action">
+                    <i class="fa-solid fa-circle-question me-2"></i> Students Requests</a> -->
             </div>
         </div>
     </div>
@@ -106,54 +104,54 @@
                                     <form action="#" method="post" enctype="multipart/form-data"
                                         class="form-horizontal">
                                         <div class="row form-group">
-                                            <div class="col-md-6 mb-3">
+                                            <div class="col-md-4 mb-3">
                                                 <label for="S_Pic" class="form-control-label mb-2">
                                                     Profile Picture</label>
                                                 <input type="file" id="S_Pic" class="form-control" />
                                             </div>
-                                            <div class="col-md-6 mb-3">
+                                            <div class="col-md-4 mb-3">
                                                 <label for="S_NAME" class="form-control-label mb-2">
                                                     Student Name</label><input type="text" id="S_NAME"
                                                     placeholder="Enter Student name" class="form-control" />
                                             </div>
-                                            <div class="col-md-6 mb-3">
+                                            <div class="col-md-4 mb-3">
                                                 <label for="S_ID" class="form-control-label mb-2">Student
                                                     Id</label><input type="text" id="S_ID"
                                                     placeholder="Enter Student College Id" class="form-control" />
                                             </div>
-                                            <div class="col-md-6 mb-3">
+                                            <div class="col-md-4 mb-3">
                                                 <label for="S_PARENT_NAME" class="form-control-label mb-2">
                                                     Guardian Name</label><input type="text" id="S_PARENT_NAME"
                                                     placeholder="Enter Guardian name" class="form-control" />
                                             </div>
-                                            <div class="col-md-6 mb-3">
+                                            <div class="col-md-4 mb-3">
                                                 <label for="S_PARENT_NUMBER" class="form-control-label mb-2">Guardian
                                                     Mobile</label><input type="number" id="S_PARENT_NUMBER"
                                                     placeholder="Enter Guardian Mobile" class="form-control" />
                                             </div>
-                                            <!-- <div class="col-md-6 mb-3">
+                                            <!-- <div class="col-md-4 mb-3">
                                                 <label for="S_MAIL" class="form-control-label mb-2">Student
                                                     Email</label><input type="email" id="S_MAIL"
                                                     placeholder="Enter Student Mail Id" class="form-control" />
                                             </div> -->
-                                            <div class="col-md-6 mb-3">
+                                            <div class="col-md-4 mb-3">
                                                 <label for="S_NUM" class="form-control-label mb-2">Phone
                                                     Number</label><input type="number" id="S_NUM"
                                                     placeholder="Enter Phone Number" class="form-control" />
                                             </div>
-                                            <div class="col-md-6 mb-3">
+                                            <div class="col-md-4 mb-3">
                                                 <label for="S_START" class="form-control-label mb-2">Session
                                                     From</label><input type="date" id="S_START"
                                                     placeholder="Enter Student Session Start From"
                                                     class="form-control" />
                                             </div>
 
-                                            <div class="col-md-6 mb-3">
+                                            <div class="col-md-4 mb-3">
                                                 <label for="S_TO" class="form-control-label mb-2">Session
                                                     To</label><input type="date" id="S_TO"
                                                     placeholder="Enter Student Session Start To" class="form-control" />
                                             </div>
-                                            <div class="col-md-6 mb-3">
+                                            <div class="col-md-4 mb-3">
                                                 <label for="S_GENDER" class="form-control-label mb-2">Gender</label>
                                                 <select name="select" id="S_GENDER" class="form-control">
                                                     <option value="0" disabled selected>
@@ -164,7 +162,7 @@
                                                     <option value="2">Other</option>
                                                 </select>
                                             </div>
-                                            <div class="col-md-6 mb-3">
+                                            <div class="col-md-4 mb-3">
                                                 <label for="S_GENDER" class="form-control-label mb-2">Stream</label>
                                                 <select name="select" id="S_GENDER" class="form-control">
                                                     <option value="0" disabled selected>
@@ -185,20 +183,20 @@
                                                     </option>
                                                 </select>
                                             </div>
-                                            <div class="col-md-6 mb-3">
+                                            <div class="col-md-4 mb-3">
                                                 <label for="S_ADD_YEAR" class="form-control-label mb-2">Hostel Admission
                                                     Year</label><input type="date" id="S_ADD_YEAR"
                                                     placeholder="Enter Student Hostel Admission Year"
                                                     class="form-control" />
                                             </div>
-                                            <div class="col-md-6 mb-3">
+                                            <div class="col-md-4 mb-3">
                                                 <label for="S_ROOM" class="form-control-label mb-2">Room
                                                     Number</label><input type="number" id="S_ROOM"
                                                     placeholder="Enter Room Number" class="form-control" />
                                             </div>
                                             <div class="col-md-12 mt-4"
                                                 style="display: flex; justify-content: center; align-items: center;">
-                                                <button type="submit" id="S_BTN" class="btn btn-light w-100">
+                                                <button type="submit" id="S_BTN" class="btn btn-dark w-100">
                                                     Submit
                                                 </button>
                                             </div>

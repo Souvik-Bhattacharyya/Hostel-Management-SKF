@@ -60,15 +60,16 @@
         </div>
         <div class="offcanvas-body">
             <div class="list-group">
-                <a type="button" href="./index.html" class="list-group-item list-group-item-action" aria-current="true">
+                <a type="button" href="./index.html" class="list-group-item list-group-item-action active"
+                    aria-current="true">
                     <i class="fa-solid fa-laptop me-2"></i> Dashboard
                 </a>
-                <a type="button" href="./allStudent.html" class="list-group-item list-group-item-action active"><i
+                <a type="button" href="./allStudent.html" class="list-group-item list-group-item-action"><i
                         class="fa-solid fa-table me-2"></i>
                     All Student List</a>
                 <a type="button" href="./addStudent.html" class="list-group-item list-group-item-action"><i
                         class="fa-solid fa-user-plus me-2"></i> Add New Student</a>
-                <!-- <a type="button" href="./studentRequest.html" class="list-group-item list-group-item-action"><i
+<!-- <a type="button" href="./studentRequest.html" class="list-group-item list-group-item-action"><i
                         class="fa-solid fa-user-plus me-2"></i> Students Requests</a> -->
             </div>
         </div>
@@ -82,7 +83,7 @@
                         <div class="col-md-12">
                             <div class="card mt-4">
                                 <div class="card-header">
-                                    <h5 class="d-flex-center">All Student List</h5>
+                                    <h5 class="d-flex-center">Student Outgoing List</h5>
                                     <div style="display: flex; justify-content: flex-end;">
                                         <form action="">
                                             <input type="text" id="searchBox" name="searchBox"
@@ -92,58 +93,75 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <table id="bootstrap-data-table" class="table table-responsive table-searchable">
+                                    <table id="bootstrap-data-table" class="table table-responsive table-searchable" id="table-id">
                                         <thead>
                                             <tr>
                                                 <th scope="col">#</th>
-                                                <th scope="col">College Id</th>
-                                                <th scope="col">Picture</th>
+                                                <th scope="col">Created Date</th>
                                                 <th scope="col">Name</th>
-                                                <th scope="col">Room No</th>
-                                                <th scope="col">Mobile</th>
-                                                <th scope="col">Guardian Name</th>
-                                                <th scope="col">Guardian Mobile</th>
-                                                <th scope="col">Stream</th>
-                                                <th scope="col">Session To</th>
-                                                <th scope="col">Session From</th>
-                                                <th scope="col">Gender</th>
-                                                <th scope="col">Admission Date</th>
+                                                <th scope="col">Roll Number</th>
+                                                <th scope="col">Out Place</th>
+                                                <th scope="col">Out Time</th>
+                                                <th scope="col">In Time</th>
+                                                <th scope="col">Status</th>
+                                                <th scope="col">Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>1</td>
+                                                <td scope="row">1</td>
+                                                <td class="date">31/2/2023</td>
+                                                <td class="name">This is a long name</td>
                                                 <td>25300119012</td>
-                                                <td class="d-flex-center">
-                                                    <img class="prof-img" src="./assets/avtar.jpg" alt="">
+                                                <td class="place">Mankundu</td>
+                                                <td class="outTime">7.10PM</td>
+                                                <td id="inTime" class="inTime">8.00PM</td>
+                                                <td class="onGoing">
+                                                    <div class="badge text-bg-success">
+                                                        Completed
+                                                    </div>
                                                 </td>
-                                                <td>Random Roy</td>
-                                                <td>3049</td>
-                                                <td>1234567890</td>
-                                                <td>Sam Roy</td>
-                                                <td>1234567890</td>
-                                                <td>CSE</td>
-                                                <td>2019</td>
-                                                <td>2023</td>
-                                                <td>Male</td>
-                                                <td>02/12/2020</td>
+                                                <td class="action">
+                                                    <div class="btn-group">
+                                                        <button class="btn" type="button" data-bs-toggle="dropdown"
+                                                            data-bs-auto-close="true" aria-expanded="false">
+                                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                        </button>
+                                                        <ul class="dropdown-menu">
+                                                            <li>
+                                                                <button class="dropdown-item btn" href="#">Edit In
+                                                                    Time</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <td>2</td>
+                                                <td scope="row">2</td>
+                                                <td class="date">13/1/2023</td>
+                                                <td class="name">This is a long name</td>
                                                 <td>25300119012</td>
-                                                <td class="d-flex-center">
-                                                    <img class="prof-img" src="./assets/avtar.jpg" alt="">
+                                                <td class="place">Mankundu</td>
+                                                <td class="outTime">7.10PM</td>
+                                                <td id="inTime" class="inTime">No Value</td>
+                                                <td class="onGoing">
+                                                    <div class="badge text-bg-warning">
+                                                        On Going
+                                                    </div>
                                                 </td>
-                                                <td>Random Roy</td>
-                                                <td>2061</td>
-                                                <td>1234567890</td>
-                                                <td>Sam Roy</td>
-                                                <td>1234567890</td>
-                                                <td>CSE</td>
-                                                <td>2019</td>
-                                                <td>2023</td>
-                                                <td>Male</td>
-                                                <td>02/12/2020</td>
+                                                <td class="action">
+                                                    <div class="btn-group">
+                                                        <button class="btn" type="button" data-bs-toggle="dropdown"
+                                                            data-bs-auto-close="true" aria-expanded="false">
+                                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                        </button>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -155,6 +173,26 @@
             </div>
         </div>
     </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"

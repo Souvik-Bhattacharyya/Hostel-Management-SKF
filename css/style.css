@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #dashboard,
 html, body {
-    background-color: #1d1d2a;
+    background-color: #eaedf2;
 }
 
 ::-webkit-scrollbar {
@@ -69,8 +69,8 @@ a.light {
 }
 
 .card {
-    background-color: #2e303f !important;
-    color: #fff !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
 }
 
 .card .card-header {
@@ -78,21 +78,41 @@ a.light {
     font-weight: 600;
     display: flex;
     justify-content: space-between;
+    background-color: transparent;
+    padding-left: 0;
+    border-color: transparent;
 }
 
-.card th,
-.card td,
-.card label {
-    color: #fff !important;
+.card-body {
+    background-color: #fff;
+}
+
+.card th {
+    color: #888 !important;
+    border-color: #42445a;
+    font-weight: 500;
+}
+
+.card td.place,
+.card td.date {
+    color: #727272 !important;
     border-color: #42445a;
 }
 
+.card td,
+.card label {
+    color: #000 !important;
+    border-color: #42445a;
+    font-weight: 500;
+}
+
 .offcanvas {
-    background-color: #1d1d2a !important;
+    background-color: #fff !important;
 }
 
 .offcanvas-header .offcanvas-title {
-    color: #fff;
+    color: #333;
+    font-weight: 500;
 }
 
 .offcanvas-body {
@@ -108,7 +128,7 @@ a.light {
 .offcanvas-body .list-group-item {
     padding-top: 15px;
     padding-bottom: 15px;
-    background-color: #1d1d2a;
+    background-color: #fff;
     color: #7d7d7d;
 }
 
@@ -204,6 +224,15 @@ a.light {
 #loginAdmin .card-text p {
     font-size: 14px;
     font-family: "Poppins", sans-serif;
+}
+
+#loginAdmin .card-body {
+    background-color: #42445a;
+    border-radius: 6px;
+}
+
+#loginAdmin .card-text, #loginAdmin label{
+    color: #fff !important; 
 }
 
 #loginAdmin {
@@ -305,4 +334,55 @@ a.light {
 
 .table-searchable td[data-searchable="false"] {
     background-color: lightcoral;
+}
+
+.table .outTime {
+    color: rgb(7, 177, 24) !important;
+}
+
+.table .inTime {
+    color: red !important;
+}
+
+tbody, td, tfoot, th, thead, tr {
+    border-color: #c9c9c9 !important;
+    border-style: dashed !important;
+    border-width: 0;
+}
+
+/*  */
+.list table {
+    margin-bottom: 0;
+}
+
+.list .card-body {
+    padding-bottom: 0;
+}
+
+/* .list .card-header a{
+    color: #42445a;
+} */
+
+/* List Card */
+.list-card .card-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 6px !important;
+}
+
+.list-card .card-body p {
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #828282;
+}
+
+.list-card .right {
+    display: flex;
+    justify-content: center;
+}
+
+.list-card .right img {
+    width: 100px;
 }

@@ -13,13 +13,13 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+    <nav class="navbar navbar-expand-lg bg-light navbar-light sticky-top">
         <div class="container">
-            <a class="light" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+            <a class="navbar-brand" href="#">Hostel Management</a>
+            <a class="dark" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
                 aria-controls="offcanvasExample">
                 <i class="fa-solid fa-bars fa-lg me-2"></i>
             </a>
-            <a class="navbar-brand" href="#">Hostel Management System</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -39,12 +39,12 @@
                             Profile
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="./Student/index.html">Student</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="./Login/logHome.html">Logout <i
+                            <li><a class="dropdown-item" href="./Login/login.html">Logout <i
                                         class="fa-solid fa-right-from-bracket"></i></a></li>
                         </ul>
                     </li>
@@ -60,7 +60,8 @@
         </div>
         <div class="offcanvas-body">
             <div class="list-group">
-                <a type="button" href="./index.html" class="list-group-item list-group-item-action active" aria-current="true">
+                <a type="button" href="./index.html" class="list-group-item list-group-item-action active"
+                    aria-current="true">
                     <i class="fa-solid fa-laptop me-2"></i> Dashboard
                 </a>
                 <a type="button" href="./allStudent.html" class="list-group-item list-group-item-action"><i
@@ -68,8 +69,8 @@
                     All Student List</a>
                 <a type="button" href="./addStudent.html" class="list-group-item list-group-item-action"><i
                         class="fa-solid fa-user-plus me-2"></i> Add New Student</a>
-                <a type="button" href="./studentRequest.html" class="list-group-item list-group-item-action"><i
-                        class="fa-solid fa-user-plus me-2"></i> Students Requests</a>
+                <!-- <a type="button" href="./studentRequest.html" class="list-group-item list-group-item-action"><i
+                        class="fa-solid fa-user-plus me-2"></i> Students Requests</a> -->
             </div>
         </div>
     </div>
@@ -78,63 +79,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="row">
-                        <div class="col-md-7">
-                            <div class="card mt-4">
-                                <div class="card-header">Student Outgoing List</div>
-                                <div class="card-body">
-                                    <table class="table table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">Roll</th>
-                                                <th scope="col">Name</th>
-                                                <th scope="col">Out Place</th>
-                                                <th scope="col">Out Time</th>
-                                                <th scope="col">In Time</th>
-                                                <th scope="col">Status</th>
-                                                <th scope="col">Action</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>Mark</td>
-                                                <td>Mankundu</td>
-                                                <td>7.10PM</td>
-                                                <td>8.00PM</td>
-                                                <td>
-                                                    <div class="badge text-bg-success">Completed</div>
-                                                </td>
-                                                <td>
-                                                    <button class="btn btn-light btn-sm">
-                                                        <i class="fa-solid fa-pen-to-square"></i>
-                                                        Edit
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">2</th>
-                                                <td>Mark</td>
-                                                <td>Mankundu</td>
-                                                <td>7.10PM</td>
-                                                <td id="inTime"></td>
-                                                <td class="onGoing">
-                                                    <div class="badge text-bg-warning">
-                                                        On Going
-                                                    </div>
-                                                </td>
-                                                <td class="action">
-                                                    <button class="btn btn-light btn-sm" onclick="time()">
-                                                        <i class="fa-solid fa-pen-to-square"></i>
-                                                        Edit
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-5">
+                        <div class="col-md-6">
                             <div class="card mt-4">
                                 <div class="card-header">Student Outgoing Request</div>
                                 <div class="card-body">
@@ -153,9 +98,9 @@
                                                 <td>25300119012</td>
                                                 <td>Mark</td>
                                                 <td>Mankundu</td>
-                                                <td>7.10PM</td>
+                                                <td class="outTime">7.10PM</td>
                                                 <td class="d-flex" style="justify-content: center;">
-                                                    <button class="btn btn-light btn-sm me-2">
+                                                    <button class="btn btn-dark btn-sm me-2">
                                                         <i class="fa-solid fa-check"></i>
                                                     </button>
                                                     <button class="btn btn-danger btn-sm" onclick="remove_tr(this)">
@@ -167,9 +112,9 @@
                                                 <td>25300119012</td>
                                                 <td>Mark</td>
                                                 <td>Mankundu</td>
-                                                <td>7.10PM</td>
+                                                <td class="outTime">7.10PM</td>
                                                 <td class="d-flex" style="justify-content: center;">
-                                                    <button class="btn btn-light btn-sm me-2">
+                                                    <button class="btn btn-dark btn-sm me-2">
                                                         <i class="fa-solid fa-check"></i>
                                                     </button>
                                                     <button class="btn btn-danger btn-sm" onclick="remove_tr(this)">
@@ -181,9 +126,9 @@
                                                 <td>25300119012</td>
                                                 <td>Mark</td>
                                                 <td>Mankundu</td>
-                                                <td>7.10PM</td>
+                                                <td class="outTime">7.10PM</td>
                                                 <td class="d-flex" style="justify-content: center;">
-                                                    <button class="btn btn-light btn-sm me-2">
+                                                    <button class="btn btn-dark btn-sm me-2">
                                                         <i class="fa-solid fa-check"></i>
                                                     </button>
                                                     <button class="btn btn-danger btn-sm" onclick="remove_tr(this)">
@@ -196,11 +141,257 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-6">
+                            <div class="card mt-4">
+                                <div class="card-header">Home Visit Request</div>
+                                <div class="card-body">
+                                    <table class="table table-hover" id="listTable">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Id</th>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Out Date</th>
+                                                <th scope="col">Expected In Date</th>
+                                                <th scope="col" class="text-center">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>25300119012</td>
+                                                <td>Long Name</td>
+                                                <td class="outTime">13/7/2023 7.10PM</td>
+                                                <td class="inTime">16/7/2023</td>
+                                                <td class="d-flex" style="justify-content: center;">
+                                                    <button class="btn btn-dark btn-sm me-2">
+                                                        <i class="fa-solid fa-check"></i>
+                                                    </button>
+                                                    <button class="btn btn-danger btn-sm" onclick="remove_tr(this)">
+                                                        <i class="fa-solid fa-trash"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>25300119012</td>
+                                                <td>Long Name</td>
+                                                <td class="outTime">13/7/2023 7.10PM</td>
+                                                <td class="inTime">16/7/2023</td>
+                                                <td class="d-flex" style="justify-content: center;">
+                                                    <button class="btn btn-dark btn-sm me-2">
+                                                        <i class="fa-solid fa-check"></i>
+                                                    </button>
+                                                    <button class="btn btn-danger btn-sm" onclick="remove_tr(this)">
+                                                        <i class="fa-solid fa-trash"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>25300119012</td>
+                                                <td>Long Name</td>
+                                                <td class="outTime">13/7/2023 7.10PM</td>
+                                                <td class="inTime">16/7/2023</td>
+                                                <td class="d-flex" style="justify-content: center;">
+                                                    <button class="btn btn-dark btn-sm me-2">
+                                                        <i class="fa-solid fa-check"></i>
+                                                    </button>
+                                                    <button class="btn btn-danger btn-sm" onclick="remove_tr(this)">
+                                                        <i class="fa-solid fa-trash"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mt-3">
+                            <div class="row">
+                                <div class="col-md-3 list-card">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="col-6">
+                                                <p>Current Students</p>
+                                                <h1 class="counter-count">256</h1>
+                                            </div>
+                                            <div class="col-6 right">
+                                                <img src="./assets/details.gif" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 list-card">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="col-6">
+                                                <p>Available Furnitures</p>
+                                                <h1 class="counter-count">300+</h1>
+                                            </div>
+                                            <div class="col-6 right">
+                                                <img src="./assets/furniture.gif" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 list-card">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="col-6">
+                                                <p>Available Students</p>
+                                                <h1 class="counter-count">30</h1>
+                                            </div>
+                                            <div class="col-6 right">
+                                                <img src="./assets/students.gif" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 list-card">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="col-6">
+                                                <p>Available Rooms</p>
+                                                <h1>256</h1>
+                                            </div>
+                                            <div class="col-6 right">
+                                                <img src="./assets/rooms.gif" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 list">
+                            <div class="card my-3">
+                                <div class="card-header">Student Outgoing List (Today)
+                                    <a class="btn btn-secondary btn-sm" href="./outgoingList.html">See More <i
+                                            class="fa-solid fa-chevron-right"></i></a>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Out Place</th>
+                                                <th scope="col">Out Time</th>
+                                                <th scope="col">In Time</th>
+                                                <th scope="col">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td scope="row">1</td>
+                                                <td class="name">This is a long name</td>
+                                                <td class="place">Mankundu</td>
+                                                <td class="outTime">7.10PM</td>
+                                                <td id="inTime" class="inTime">8.00PM</td>
+                                                <td class="action">
+                                                    <div class="btn-group">
+                                                        <button class="btn" type="button" data-bs-toggle="dropdown"
+                                                            data-bs-auto-close="true" aria-expanded="false">
+                                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                        </button>
+                                                        <ul class="dropdown-menu">
+                                                            <li>
+                                                                <button class="dropdown-item btn" href="#">Enter In
+                                                                    Time</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">3</td>
+                                                <td class="name">This is a long name</td>
+                                                <td class="place">Mankundu</td>
+                                                <td class="outTime">7.10PM</td>
+                                                <td id="inTime" class="inTime">No Value</td>
+                                                <td class="action">
+                                                    <div class="btn-group">
+                                                        <button class="btn" type="button" data-bs-toggle="dropdown"
+                                                            data-bs-auto-close="true" aria-expanded="false">
+                                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                        </button>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a class="dropdown-item" href="#">Enter Intime</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 list">
+                            <div class="card my-3">
+                                <div class="card-header">Home List (Today)
+                                    <a class="btn btn-secondary btn-sm" href="./homeComming.html">See More <i
+                                            class="fa-solid fa-chevron-right"></i></a>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Out Date & Time</th>
+                                                <th scope="col">In Date</th>
+                                                <th scope="col">Attachment</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td scope="row">1</td>
+                                                <td class="name">This is a long name</td>
+                                                <td class="outTime">2/12/2023 7.10PM</td>
+                                                <td id="inTime" class="inTime">8.00PM</td>
+                                                <td>
+                                                    <button class="btn btn-success btn-sm" data-bs-toggle="modal"
+                                                        data-bs-target="#staticBackdrop">View <i
+                                                            class="fa-solid fa-eye"></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">3</td>
+                                                <td class="name">This is a long name</td>
+                                                <td class="outTime">2/12/2023 7.10PM</td>
+                                                <td id="inTime" class="inTime">No Value</td>
+                                                <td>
+                                                    <button class="btn btn-success btn-sm" data-bs-toggle="modal"
+                                                        data-bs-target="#staticBackdrop">View <i
+                                                            class="fa-solid fa-eye"></i></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -230,6 +421,21 @@
                 This.closest('tr').remove();
             }
         }
+
+        $('.counter-count').each(function () {
+            $(this).prop('Counter', 0).animate({
+                Counter: $(this).text()
+            }, {
+
+                //chnage count up speed here
+                duration: 4000,
+                easing: 'swing',
+                step: function (now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        });
+
     </script>
 </body>
 

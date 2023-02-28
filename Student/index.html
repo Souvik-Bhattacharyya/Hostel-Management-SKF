@@ -7,15 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hostel Management System</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/student.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+    <nav class="navbar navbar-expand-lg bg-light navbar-light sticky-top">
         <div class="container">
-            <a class="light" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+            <a class="dark" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
                 aria-controls="offcanvasExample">
                 <i class="fa-solid fa-bars fa-lg me-2"></i>
             </a>
@@ -39,12 +40,12 @@
                             Profile
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="">Student Login</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="./Login/logHome.html">Logout <i
+                            <li><a class="dropdown-item" href="../Login/login.html">Logout <i
                                         class="fa-solid fa-right-from-bracket"></i></a></li>
                         </ul>
                     </li>
@@ -61,11 +62,12 @@
         <div class="offcanvas-body">
             <div class="list-group">
                 <a type="button" class="list-group-item list-group-item-action active" aria-current="true">
-                    <i class="fa-solid fa-laptop me-2"></i> Dashboard
+                    <i class="fa-solid fa-laptop me-2"></i>Student Dashboard
                 </a>
                 <a type="button" href="./allStudent.html" class="list-group-item list-group-item-action"><i
                         class="fa-solid fa-table me-2"></i>
-                    All Student List</a>
+
+                </a>
                 <a type="button" href="./addStudent.html" class="list-group-item list-group-item-action"><i
                         class="fa-solid fa-user-plus me-2"></i> Add New Student</a>
             </div>
@@ -78,13 +80,12 @@
                     <div class="row">
                         <div class="col-md-8">
                             <div class="card mt-4">
-                                <div class="card-header">Student Outgoing List</div>
+                                <div class="card-header">Outgoing List</div>
                                 <div class="card-body">
                                     <table class="table table-hover">
                                         <thead>
                                             <tr>
-                                                <th scope="col">Roll</th>
-                                                <th scope="col">Name</th>
+                                                <th scope="col">#</th>
                                                 <th scope="col">Out Place</th>
                                                 <th scope="col">Out Time</th>
                                                 <th scope="col">In Time</th>
@@ -95,36 +96,50 @@
                                         <tbody>
                                             <tr>
                                                 <th scope="row">1</th>
-                                                <td>Mark</td>
                                                 <td>Mankundu</td>
-                                                <td>7.10PM</td>
-                                                <td>8.00PM</td>
+                                                <td class="outTime">7.10PM</td>
+                                                <td class="inTime">8.00PM</td>
                                                 <td>
                                                     <div class="badge text-bg-success">Completed</div>
                                                 </td>
-                                                <td>
-                                                    <button class="btn btn-light btn-sm">
-                                                        <i class="fa-solid fa-pen-to-square"></i>
-                                                        Edit
-                                                    </button>
+                                                <td class="action">
+                                                    <div class="btn-group">
+                                                        <button class="btn" type="button" data-bs-toggle="dropdown"
+                                                            data-bs-auto-close="true" aria-expanded="false">
+                                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                        </button>
+                                                        <ul class="dropdown-menu">
+                                                            <li>
+                                                                <button class="dropdown-item btn" href="#">Enter In
+                                                                    Time</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <th scope="row">2</th>
-                                                <td>Mark</td>
                                                 <td>Mankundu</td>
-                                                <td>7.10PM</td>
-                                                <td id="inTime"></td>
+                                                <td class="outTime">7.10PM</td>
+                                                <td class="inTime" id="inTime">no value</td>
                                                 <td class="onGoing">
                                                     <div class="badge text-bg-warning">
                                                         On Going
                                                     </div>
                                                 </td>
                                                 <td class="action">
-                                                    <button class="btn btn-light btn-sm" onclick="time()">
-                                                        <i class="fa-solid fa-pen-to-square"></i>
-                                                        Edit
-                                                    </button>
+                                                    <div class="btn-group">
+                                                        <button class="btn" type="button" data-bs-toggle="dropdown"
+                                                            data-bs-auto-close="true" aria-expanded="false">
+                                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                        </button>
+                                                        <ul class="dropdown-menu">
+                                                            <li>
+                                                                <button class="dropdown-item btn" href="#">Enter In
+                                                                    Time</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -134,20 +149,11 @@
                         </div>
                         <div class="col-md-4" id="card-right">
                             <div class="card mt-4">
-                                <div class="card-header">Student Outgoing Form</div>
+                                <div class="card-header">Outgoing Form</div>
                                 <div class="card-body">
                                     <form action="">
                                         <table class="table" id="formTable">
                                             <tbody>
-                                                <tr>
-                                                    <th scope="col">
-                                                        <div>
-                                                            <label for="roll" class="form-label">Roll Number</label>
-                                                            <input type="number" class="form-control" id="roll" required
-                                                                placeholder="Enter Student Roll">
-                                                        </div>
-                                                    </th>
-                                                </tr>
                                                 <tr>
                                                     <th scope="col">
                                                         <div>
@@ -176,8 +182,7 @@
                                                 </tr>
                                                 <tr>
                                                     <th scope="col">
-                                                        <button type="submit"
-                                                            class="btn btn-light w-100">Submit</button>
+                                                        <button type="submit" class="btn btn-dark w-100">Submit</button>
                                                     </th>
                                                 </tr>
                                             </tbody>

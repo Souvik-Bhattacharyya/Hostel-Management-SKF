@@ -1,0 +1,80 @@
+.card {
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+.card .card-header {
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    padding-left: 0;
+    border-color: transparent;
+}
+
+.card-body {
+    background-color: #fff;
+}
+
+.card th {
+    color: #888 !important;
+    border-color: #42445a;
+    font-weight: 500;
+}
+
+.card td.place,
+.card td.date {
+    color: #727272 !important;
+    border-color: #42445a;
+}
+
+.card td,
+.card label {
+    color: #000 !important;
+    border-color: #42445a;
+    font-weight: 500;
+}
+
+.table-bordered {
+    border-color: #42445a !important;
+}
+
+.d-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-searchable .is-hidden {
+    display: none;
+}
+
+.table-searchable .is-match {
+    background-color: rgb(21, 143, 110) !important;
+    transition: background-color .5s ease-in;
+}
+
+.table-searchable td[data-searchable="false"] {
+    background-color: lightcoral;
+}
+
+.table .outTime {
+    color: rgb(7, 177, 24) !important;
+}
+
+.table .inTime {
+    color: red !important;
+}
+
+tbody, td, tfoot, th, thead, tr {
+    border-color: #c9c9c9 !important;
+    border-style: dashed !important;
+    border-width: 0;
+}
+
+#formTable tbody, #formTable td, #formTable tfoot, #formTable th, #formTable thead, #formTable tr {
+    border-color: transparent !important;
+    border-style: solid !important;
+    border-width: 0;
+}

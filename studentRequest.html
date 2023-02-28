@@ -29,7 +29,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light sticky-top">
         <div class="container">
             <a class="light" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
                 aria-controls="offcanvasExample">
@@ -97,113 +97,115 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-8">
                             <div class="card mt-4">
-                                <div class="card-header">
-                                    <h5>Add New Student</h5>
-                                </div>
+                                <div class="card-header">Student Outgoing List</div>
                                 <div class="card-body">
-                                    <form action="#" method="post" enctype="multipart/form-data"
-                                        class="form-horizontal">
-                                        <div class="row form-group">
-                                            <div class="col-md-6 mb-3">
-                                                <label for="S_Pic" class="form-control-label mb-2">
-                                                    Profile Picture</label>
-                                                <input type="file" id="S_Pic" class="form-control" />
-                                            </div>
-                                            <div class="col-md-6 mb-3">
-                                                <label for="S_NAME" class="form-control-label mb-2">
-                                                    Student Name</label><input type="text" id="S_NAME"
-                                                    placeholder="Enter Student name" class="form-control" />
-                                            </div>
-                                            <div class="col-md-6 mb-3">
-                                                <label for="S_ID" class="form-control-label mb-2">Student
-                                                    Id</label><input type="text" id="S_ID"
-                                                    placeholder="Enter Student College Id" class="form-control" />
-                                            </div>
-                                            <div class="col-md-6 mb-3">
-                                                <label for="S_PARENT_NAME" class="form-control-label mb-2">
-                                                    Guardian Name</label><input type="text" id="S_PARENT_NAME"
-                                                    placeholder="Enter Guardian name" class="form-control" />
-                                            </div>
-                                            <div class="col-md-6 mb-3">
-                                                <label for="S_PARENT_NUMBER" class="form-control-label mb-2">Guardian
-                                                    Mobile</label><input type="number" id="S_PARENT_NUMBER"
-                                                    placeholder="Enter Guardian Mobile" class="form-control" />
-                                            </div>
-                                            <!-- <div class="col-md-6 mb-3">
-                                                <label for="S_MAIL" class="form-control-label mb-2">Student
-                                                    Email</label><input type="email" id="S_MAIL"
-                                                    placeholder="Enter Student Mail Id" class="form-control" />
-                                            </div> -->
-                                            <div class="col-md-6 mb-3">
-                                                <label for="S_NUM" class="form-control-label mb-2">Phone
-                                                    Number</label><input type="number" id="S_NUM"
-                                                    placeholder="Enter Phone Number" class="form-control" />
-                                            </div>
-                                            <div class="col-md-6 mb-3">
-                                                <label for="S_START" class="form-control-label mb-2">Session
-                                                    From</label><input type="date" id="S_START"
-                                                    placeholder="Enter Student Session Start From"
-                                                    class="form-control" />
-                                            </div>
-
-                                            <div class="col-md-6 mb-3">
-                                                <label for="S_TO" class="form-control-label mb-2">Session
-                                                    To</label><input type="date" id="S_TO"
-                                                    placeholder="Enter Student Session Start To" class="form-control" />
-                                            </div>
-                                            <div class="col-md-6 mb-3">
-                                                <label for="S_GENDER" class="form-control-label mb-2">Gender</label>
-                                                <select name="select" id="S_GENDER" class="form-control">
-                                                    <option value="0" disabled selected>
-                                                        Select Gender
-                                                    </option>
-                                                    <option value="1">Male</option>
-                                                    <option value="2">Female</option>
-                                                    <option value="2">Other</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-6 mb-3">
-                                                <label for="S_GENDER" class="form-control-label mb-2">Stream</label>
-                                                <select name="select" id="S_GENDER" class="form-control">
-                                                    <option value="0" disabled selected>
-                                                        Select Stream
-                                                    </option>
-                                                    <option value="1">
-                                                        B.Tech in Computer Science & Engineering(CSE)
-                                                    </option>
-                                                    <option value="2">
-                                                        B.Tech in Electrical Engineering(EE)
-                                                    </option>
-                                                    <option value="2">
-                                                        B.Tech in Electronics and Communication
-                                                        Engineering(ECE)
-                                                    </option>
-                                                    <option value="3">
-                                                        B.Tech in Mechanical Engineering(ME)
-                                                    </option>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-6 mb-3">
-                                                <label for="S_ADD_YEAR" class="form-control-label mb-2">Hostel Admission
-                                                    Year</label><input type="date" id="S_ADD_YEAR"
-                                                    placeholder="Enter Student Hostel Admission Year"
-                                                    class="form-control" />
-                                            </div>
-                                            <div class="col-md-6 mb-3">
-                                                <label for="S_ROOM" class="form-control-label mb-2">Room
-                                                    Number</label><input type="number" id="S_ROOM"
-                                                    placeholder="Enter Room Number" class="form-control" />
-                                            </div>
-                                            <div class="col-md-12 mt-4"
-                                                style="display: flex; justify-content: center; align-items: center;">
-                                                <button type="submit" id="S_BTN" class="btn btn-light w-100">
-                                                    Submit
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </form>
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Roll</th>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Out Place</th>
+                                                <th scope="col">Out Time</th>
+                                                <th scope="col">In Time</th>
+                                                <th scope="col">Status</th>
+                                                <th scope="col">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Mark</td>
+                                                <td>Mankundu</td>
+                                                <td>7.10PM</td>
+                                                <td>8.00PM</td>
+                                                <td>
+                                                    <div class="badge text-bg-success">Completed</div>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-light btn-sm">
+                                                        <i class="fa-solid fa-pen-to-square"></i>
+                                                        Edit
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Mark</td>
+                                                <td>Mankundu</td>
+                                                <td>7.10PM</td>
+                                                <td id="inTime"></td>
+                                                <td class="onGoing">
+                                                    <div class="badge text-bg-warning">
+                                                        On Going
+                                                    </div>
+                                                </td>
+                                                <td class="action">
+                                                    <button class="btn btn-light btn-sm" onclick="time()">
+                                                        <i class="fa-solid fa-pen-to-square"></i>
+                                                        Edit
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mt-4">
+                                <div class="card-header">Student Outgoing List</div>
+                                <div class="card-body">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Roll</th>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Out Place</th>
+                                                <th scope="col">Out Time</th>
+                                                <th scope="col">In Time</th>
+                                                <th scope="col">Status</th>
+                                                <th scope="col">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Mark</td>
+                                                <td>Mankundu</td>
+                                                <td>7.10PM</td>
+                                                <td>8.00PM</td>
+                                                <td>
+                                                    <div class="badge text-bg-success">Completed</div>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-light btn-sm">
+                                                        <i class="fa-solid fa-pen-to-square"></i>
+                                                        Edit
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Mark</td>
+                                                <td>Mankundu</td>
+                                                <td>7.10PM</td>
+                                                <td id="inTime"></td>
+                                                <td class="onGoing">
+                                                    <div class="badge text-bg-warning">
+                                                        On Going
+                                                    </div>
+                                                </td>
+                                                <td class="action">
+                                                    <button class="btn btn-light btn-sm" onclick="time()">
+                                                        <i class="fa-solid fa-pen-to-square"></i>
+                                                        Edit
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
