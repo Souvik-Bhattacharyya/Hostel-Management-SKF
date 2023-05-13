@@ -58,10 +58,10 @@
         </div>
         <div class="offcanvas-body">
             <div class="list-group">
-                <a type="button" class="list-group-item list-group-item-action active" aria-current="true">
+                <a type="button" href="./index.html" class="list-group-item list-group-item-action" aria-current="true">
                     <i class="fa-solid fa-laptop me-2"></i>Student Dashboard
                 </a>
-                <a type="button" href="./complain.html" class="list-group-item list-group-item-action"><i
+                <a type="button" href="./complain.html" class="list-group-item list-group-item-action active"><i
                         class="fa-solid fa-table me-2"></i>Student Enquiry
                 </a>
             </div>
@@ -74,94 +74,38 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="card mt-4">
-                                <div class="card-header">Home Going Request</div>
+                                <div class="card-header">
+                                    <h5>Create A Enquery</h5>
+                                </div>
                                 <div class="card-body">
-                                    <form action="">
-                                        <table class="table" id="formTable">
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="col">
-                                                        <div>
-                                                            <label for="time" class="form-label">Out Date & Time</label>
-                                                            <input type="datetime-local" class="form-control" id="outdate"
-                                                                required>
-                                                        </div>
-                                                    </th>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="col">
-                                                        <div>
-                                                            <label for="time" class="form-label">Expect Return Date</label>
-                                                            <input type="datetime-local" class="form-control" id="time"
-                                                                required>
-                                                        </div>
-                                                    </th>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="col">
-                                                        <div>
-                                                            <label for="S_Pic" class="form-control-label mb-2">
-                                                               Attachment</label>
-                                                            <input type="file" id="S_Pic" class="form-control" />
-                                                        </div>
-                                                    </th>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="col">
-                                                        <button type="submit" class="btn btn-dark w-100">Submit</button>
-                                                    </th>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                    <form action="#" method="post" enctype="multipart/form-data"
+                                        class="form-horizontal">
+                                        <div class="row form-group">
+                                            <div class="col-md-12 mb-3">
+                                                <label for="S_NAME" class="form-control-label mb-2">
+                                                    Subject</label>
+                                                <input type="text" id="E_Sub" placeholder="Enter Enquery Subject"
+                                                    class="form-control" />
+                                            </div>
+                                            <div class="col-md-12 mb-3">
+                                                <label for="S_NAME" class="form-control-label mb-2">
+                                                    Message</label>
+                                                <textarea id="E_ENQ" name="w3review" cols="50" class="form-control"
+                                                    placeholder="">
+                                                </textarea>
+                                            </div>
+                                            <div class="col-md-12 mt-4"
+                                                style="display: flex; justify-content: center; align-items: center;">
+                                                <button type="submit" id="S_BTN" class="btn btn-dark w-100">
+                                                    Submit
+                                                </button>
+                                            </div>
+                                        </div>
                                     </form>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6" id="card-right">
-                            <div class="card mt-4">
-                                <div class="card-header">Outgoing Form</div>
-                                <div class="card-body">
-                                    <form action="">
-                                        <table class="table" id="formTable">
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="col">
-                                                        <div>
-                                                            <label for="place" class="form-label">Out Place</label>
-                                                            <input type="text" class="form-control"
-                                                                list="datalistOptions" id="place"
-                                                                placeholder="Type to search...">
-                                                            <datalist id="datalistOptions">
-                                                                <option value="Mankundu">
-                                                                <option value="Kolkata">
-                                                                <option value="Shrirampur">
-                                                                <option value="Chandannagar">
-                                                                <option value="Chinchura">
-                                                            </datalist>
-                                                        </div>
-                                                    </th>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="col">
-                                                        <div>
-                                                            <label for="time" class="form-label">Out Time</label>
-                                                            <input type="datetime-local" class="form-control" id="time"
-                                                                required>
-                                                        </div>
-                                                    </th>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="col">
-                                                        <button type="submit" class="btn btn-dark w-100">Submit</button>
-                                                    </th>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
+                        <div class="col-md-6">
                             <div class="card mt-4">
                                 <div class="card-header">
                                     <h5>My Previous Enquery List</h5>
@@ -212,6 +156,30 @@
                                                     </button>
                                                 </td>
                                             </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Fan Broken</td>
+                                                <td class="d-flex" style="justify-content: center;">
+                                                    <button class="btn btn-dark btn-sm me-2">
+                                                        <i class="fa-solid fa-check"></i>
+                                                    </button>
+                                                    <button class="btn btn-danger btn-sm" onclick="remove_tr(this)">
+                                                        <i class="fa-solid fa-trash"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Fan Broken</td>
+                                                <td class="d-flex" style="justify-content: center;">
+                                                    <button class="btn btn-dark btn-sm me-2">
+                                                        <i class="fa-solid fa-check"></i>
+                                                    </button>
+                                                    <button class="btn btn-danger btn-sm" onclick="remove_tr(this)">
+                                                        <i class="fa-solid fa-trash"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -222,6 +190,9 @@
             </div>
         </div>
     </section>
+    <marquee class="pt-2 bg-light fixed-bottom">*Hello Name! If you facing any kind of problems you can send us a brief
+        notice about your
+        problem! Thank you*</marquee>
 
     <!-- js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
